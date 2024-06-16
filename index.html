@@ -1,0 +1,352 @@
+<!DOCTYPE HTML>
+<HEAD>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/> <!--새로운 스타일추가 원할 때 넣기?-->
+    <script src ="js/jquery-3.7.0.min.js"></script>
+    <script src ="slick/slick.min.js"></script>
+    <style>
+        .ai-wrap{
+            font-weight : 400;
+            color : inherit;
+            text-decoration: none;
+            margin : 0 auto;
+            padding : 0;
+            box-sizing: border-box;
+            width : 1160px;
+            font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+
+        }
+        .ai-wrap li{
+            list-style-type: none;
+            display: inline-block;
+        }
+        .ai-wrap a{
+         text-decoration: none;
+         color : inherit;
+        }
+        /**메인**/
+        .ai-main{
+            background-image: url("https://ftp.suzakpc.co.kr/event/company/img/ai_bg.png");
+            height : 450px;
+            color: #fff;
+            padding : 80px 0 0 40px;
+            box-sizing: border-box;
+            margin : 10px 0 50px;
+            position : relative;
+        }
+        .ai-main .ai-tit {
+            text-align: left;
+        }
+        .ai-main .ai-tit h5{
+            font-size : 1rem;
+            font-weight : 400;
+            margin : 0 0 10px 0;
+        }
+        .ai-main .ai-tit h1{
+            font-size : 3rem;
+            margin : 0;
+            font-weight : 700;
+            line-height: 2.5rem;
+        }
+        .ai-main .ai-tit h3{
+            font-weight: 300;
+            margin-bottom : 80px;
+            margin-top : 20px;
+            font-size : 1.2rem;
+        }
+        .ai-main .main-button .cons-btn{
+            background-color:#fff;
+            padding : 8px 20px;
+            color : #1e246c;
+            font-weight: 400;
+            font-size: 1.2rem;
+        }
+        /***메인 컴퓨터 이미지**/
+        .ai-main .computer-box{
+            position : absolute;
+            right : 50px;
+            top : 70px;
+
+        }
+        .ai-main .computer-box img{
+            width : 90%;
+        }
+        /** 회사 특징 **/
+        .ai-pros{
+            background-color: #eff0fd;
+            padding : 10px 0px 50px;
+            text-align: center;
+            color : #2e64d0;
+        }
+        ul.ai-lists{
+            margin : 0;
+            padding : 0;
+            position : relative;
+        }
+        ul.ai-lists{
+            height : 300px;
+        }
+        .ai-pros .ai-list-tit{
+            font-weight : 800;
+            font-size : 1.1rem;
+            margin-bottom : 10px;
+        }
+        .ai-pros .ai-list-sub{
+            color : #3e3e42;
+            font-size : 0.9rem;
+            font-weight: 500;
+            margin-top : 0;
+        }
+        .ai-pros .ai-dot-line{
+            padding : 10px 70px 0;
+        }
+        /** 고객사  **/
+        .customer{
+            margin-top : 100px;
+        }
+        .section-tit {
+            text-align: center;
+            color : #3e3e42;
+            font-size : 2.2rem;
+            padding-bottom : 30px;
+            font-weight : 500;
+        }
+        .customer-lists{
+            width : 980px;
+            border : 1px solid #f6f6f6;
+            padding : 20px 10px;
+            box-shadow : 5px 5px rgba(208,208,208,0.2);
+            text-align: center;
+        }
+        .customer-box{
+            width : 1160px;
+            padding-left : 90px;
+        }
+        .slick-prev, .slick-next {
+            top : 35%;
+        }
+        .slick-prev:before, .slick-next:before{
+            opacity: 1;
+        }
+        .slick-prev:before{
+            content: url("https://ftp.suzakpc.co.kr/event/company/img/left.png");
+            
+        }
+        .slick-next:before{
+            content : url("https://ftp.suzakpc.co.kr/event/company/img/right.png")
+        }
+        .slick-prev{
+            left : -45px;
+        }
+        .slick-next{
+            right : -45px;
+        }
+        /** 상품 **/
+        .ai-wrap .ai-inner .pro-box{
+            padding-top : 120px;
+        }
+        .pro-box .work-lists{
+            display : flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width : 100%;
+            margin-bottom : 40px;
+        }
+        [class*="work-prod"]{
+            width : 49%;
+            border : 2px solid #2e64d0;
+            position : relative;
+        
+        }
+
+        [class*="work-prod"] a
+        {
+            display: flex;
+            flex-direction: row;
+            padding-left : 10px;
+        }
+        /**상품 리스트안 목록**/
+        [class*="work-prod"] .pro-img
+        {
+            width : 40%;
+            padding-top : 10px;
+        }
+        .pro-txt{
+            padding-left : 0px;
+        }
+        .pro-txt h5{
+            font-size : 1.5rem;
+            margin : 30px 0 10px;
+            color : #3e3e42;
+            font-weight : 600;
+        }
+        .pro-txt li{
+            font-size : 1rem;
+            line-height: 1.5rem;
+            color : #606162;
+            font-weight : 300;
+        }
+        .pro-txt .price {
+            margin-top : 15px;
+            font-size : 1.5rem;
+            font-weight : 700;
+            color : #2e64d0;
+        }
+        /** 버튼   **/
+        a.more{
+            padding : 0;
+            word-spacing: -0.1rem;
+            font-weight : 300;
+        }
+        .more{
+            padding : 0;
+            width : 100px;
+            border: none;
+            position : absolute;
+            right : -15px;
+            bottom : 15px;
+           
+            
+        }
+        .more:hover{
+            color : #2e64d0;
+            box-sizing: border-box;
+            font-weight: 500;
+            word-spacing: -0.1rem;
+        }
+    /** 서버    **/
+    .sev-pro{
+        margin-top : 120px;
+        margin-bottom : 150px;
+    }
+    .sev-lists{
+        display : flex;
+        justify-content: space-between;
+    }
+    /** 워크스테이션프레임  **/
+    .frame-box .section-tit{
+        padding-bottom : 10px;
+        margin-top : 50px;
+    }
+    .frame-box h6{
+        text-align: center;
+        margin : 0;
+        font-size : 1.15rem;
+        color : #6a6a6a;
+        font-weight : 400;
+        padding-bottom : 30px;
+    }
+    .frame-box .frame-list{
+        text-align: center;
+    }
+    /** 회사 장점   **/
+    .com-box{
+        text-align: center;
+        padding: 60px 0px;
+        
+    }    
+    /** 푸터    **/
+    .ft-box{
+        background-color: #1e246c;
+        padding : 30px 0 50px;
+        text-align: center;
+        color : #fff;
+    }
+    .ft-box a{
+        color : inherit;
+        text-decoration: none;
+        display : inline;
+        padding : 10px;
+    }
+    .ft-box .ft-tit{
+        font-weight : 400;
+        margin-bottom : 0px;
+        font-size : 1.6rem;
+    }
+    .ft-box .ft-btns{
+        display : flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .ft-box .ft-sub{
+        padding : 0 0 30px;
+        margin : 10px 0;
+        font-weight: 300;
+        font-size : 1rem;
+    }
+    .ft-box .left-btn, .right-btn{
+        width : 170px;
+        height : 50px;
+        border: 1px solid #fff;
+        font-weight : 300;
+        font-size : 1.1rem;
+        margin-right : 20px;
+        box-sizing: border-box;
+        padding-top : 12px;
+        cursor : pointer;
+    }
+    .ft-box .left-btn{
+        background-color: #fff;
+        color : #1e246c;
+        font-weight : 600 !important;
+        
+    }
+    /**호버 효과**/
+    a.pro-info:hover{
+        box-shadow: 10px 10px 20px rgba(67,67,66,0.4);
+    }
+
+    </style>
+    <TITLE></TITLE>
+</HEAD>
+<body>
+    <div class="ai-wrap">
+        <div class="ai-inner">
+            <!--ai main-->
+            <section class="ai-main">
+                <div class="ai-tit">
+                    <h5>워크스테이션 환경 최적화</h5>
+                    <h1 class="main-tit">Artificial Intelligence
+                        <br>Deep Learning</h1>
+                    <h3>발전하는 인공지능 기술에 최적화되었습니다.
+                        <br>안정적인 작업환경을 구축해 보세요.
+                    </h3>    
+                </div>
+                <div class="computer-box">
+                    <img src="https://ftp.suzakpc.co.kr/event/company/img/computer.png" alt="컴퓨터">
+                </div>
+            </section>
+            <script type="text/javascript">
+                //23.03.03 YWH 비회원시 로그인 한 다음 해당 페이지 넘어오면 팝업창 뜨도록 설정 (IHY)
+                if('0' == '1'){
+                    window.open("https://www.suzakpc.co.kr/shop/advice_pop.php?type=undefined","advice","top=10, left=10, width=554, height=600, scrollbars=no");
+                    var expdate = new Date();
+                    expdate.setTime(expdate.getTime());
+                    document.cookie = "CheckPage" + "=" + escape ("") + "; path=/; expires=" + expdate.toGMTString();
+                }
+            </script>
+            <!--장점-->
+            <section class="ai-pros">
+                <div class = "ai-pors-box">
+                    <img src="https://ftp.suzakpc.co.kr/event/company/img/explan.png" alt="기업장점">
+                </div>
+            </section>
+            <!--    워크스테이션    -->
+            <secton class="frame-box">
+                <h2 class="section-tit">Workstation Frameworks Environments</h2>
+                <h6>저희 워크스테이션PC는 고성능의 AI/딥러닝의 프레임워크 호환 가능합니다.</h6>
+                <div class="frame-list">
+                    <img src="https://ftp.suzakpc.co.kr/event/company/img/frameworks.png" alt = "딥러닝 프레임워크">
+                </div>
+            </secton>
+            <section class="com-box">
+                <img class="com-pro" src="https://ftp.suzakpc.co.kr/event/company/img/com_pro.png" alt="회사 장점">
+            </section>
+        </div>
+    </div>
+</body>
+</html>    
