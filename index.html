@@ -4,10 +4,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width", initial-scale="1.0">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"/>
-    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/> <!--새로운 스타일추가 원할 때 넣기?-->
-    <script src ="js/jquery-3.7.0.min.js"></script>
-    <script src ="slick/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> <!--새로운 스타일추가 원할 때 넣기?-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <style>
         .ai-wrap{
             font-weight : 400;
@@ -37,9 +37,6 @@
             box-sizing: border-box;
             margin : 10px 0 50px;
             position : relative;
-        }
-        .ai-main .ai-tit {
-            text-align: left;
         }
         .ai-main .ai-tit h5{
             font-size : 1rem;
@@ -116,15 +113,15 @@
             font-weight : 500;
         }
         .customer-lists{
-            width : 980px;
+            width : 100%;
             border : 1px solid #f6f6f6;
-            padding : 20px 10px;
+            padding : 10px;
             box-shadow : 5px 5px rgba(208,208,208,0.2);
             text-align: center;
+            margin : 0 70px;
         }
         .customer-box{
-            width : 1160px;
-            padding-left : 90px;
+            width : 90%;
         }
         .slick-prev, .slick-next {
             top : 35%;
@@ -144,6 +141,9 @@
         }
         .slick-next{
             right : -45px;
+        }
+        .slick-slide img{
+            width : 55%;
         }
         /** 상품 **/
         .ai-wrap .ai-inner .pro-box{
@@ -189,9 +189,9 @@
             line-height: 1.5rem;
             color : #606162;
             font-weight : 300;
+            display : block;
         }
         .pro-txt .price {
-            margin-top : 15px;
             font-size : 1.5rem;
             font-weight : 700;
             color : #2e64d0;
@@ -230,7 +230,7 @@
     /** 워크스테이션프레임  **/
     .frame-box .section-tit{
         padding-bottom : 10px;
-        margin-top : 50px;
+        margin-bottom : 0;
     }
     .frame-box h6{
         text-align: center;
@@ -299,6 +299,144 @@
     a.pro-info:hover{
         box-shadow: 10px 10px 20px rgba(67,67,66,0.4);
     }
+    /**모바일**/
+    @media screen and (max-width : 767px){
+      .ai-wrap{
+        width : 100%;
+        margin: 0 auto;
+      } 
+      .ai-main {
+        background-color: #1d246c;
+        background-image: none;
+        height : 460px;
+        padding : 0;
+        margin-bottom : 15px;
+      }
+      .ai-main .ai-tit{
+        text-align: center;
+        padding-top : 20px;
+      }
+      .ai-wrap .ai-main .computer-box{
+       text-align: center;
+       position : static;
+       margin-top : 47px;
+      } 
+      .ai-main .computer-box img{
+        width : 60%;
+      }
+      .ai-main .ai-tit h5{
+        margin-top : 25px;
+        margin-bottom : 0;
+        font-size : 1rem;
+      }
+      .ai-main .ai-tit h3{
+        font-size: 1rem;
+        margin-top : 10px;
+        margin-bottom : 20px;
+      }
+      .ai-main .ai-tit h1{
+        font-size : 2rem;
+      }
+      .section-tit{
+        font-size : 1.4rem;
+        padding-bottom : 20px;
+      }
+      .main-button{
+        text-align: center;
+      }
+      .ai-main .main-button .cons-btn {
+        font-size: 1rem;
+        padding : 8px 15px;
+      }
+      /**장점**/
+    .ai-pros{
+        padding-bottom : 18px;
+    }
+    .customer-box {
+        width : 100%;
+        text-align: center;
+    } 
+    .customer-lists {
+        width : 70%;
+        padding : 5px 0 2px;
+        margin : 0 auto;
+    }
+    .slick-slide img{
+        max-width: 80% !important;
+    }
+    .slick-prev:before{
+        content: "<";
+        color : #ddd;
+        margin-left : 17px;
+        padding-top : 7px;
+    }
+    .slick-next:before {
+        content: ">";
+        color : #ddd;
+        margin-left : -25px;
+        padding-top : 7px;
+    }
+      /**제품**/
+      .pro-box .work-lists{
+        display: block;
+        width : 90%;
+        padding : 5px;
+        margin : 0 auto;
+      }
+      [class*="work-prod"]{
+        width : 100%;
+        margin-bottom : 10px;
+      }
+      [class*="work-prod"] .pro-img {
+        width : 35%;
+      }
+      .pro-txt h5 {
+        font-size : 1.2rem;
+        margin-top : 20px;
+        margin-bottom : 5px;
+      }
+      .pro-txt li {
+        font-size : 0.8rem;
+        line-height: 1rem;
+      }
+      .pro-txt .price{
+        display: none;
+      }
+      a.more{
+        font-size : 0.7rem;
+        word-spacing: 0;
+      }
+      .more{
+        right : -29px;
+        bottom : 5px;
+      }
+      
+      .frame-box h2{
+        margin-top : 30px;
+        letter-spacing : -0.1rem;
+        padding-bottom : 5px;
+      }
+      .frame-box h6 {
+        font-size: 0.7rem;
+      }
+      .com-box {
+        padding : 30px 0;
+      }
+      .ft-box .ft-sub {
+        font-size : 0.8rem;
+      }
+      .ft-box .ft-btns{
+        justify-content: center;
+        padding : 0 10px;
+      }
+      .ft-box .left-btn, .right-btn{
+        margin : 0 10px;
+        width : 40%;
+        font-size : 0.9rem;
+        height : 40px;
+        padding-top : 10px;
+      }
+    }
 
     </style>
     <TITLE></TITLE>
@@ -316,6 +454,9 @@
                         <br>안정적인 작업환경을 구축해 보세요.
                     </h3>    
                 </div>
+                <div class="main-button">
+                    <a class="cons-btn" href="javascript:;" onclick="customer_();">상담하기</a>
+                </div>
                 <div class="computer-box">
                     <img src="https://ftp.suzakpc.co.kr/event/company/img/computer.png" alt="컴퓨터">
                 </div>
@@ -328,12 +469,187 @@
                     expdate.setTime(expdate.getTime());
                     document.cookie = "CheckPage" + "=" + escape ("") + "; path=/; expires=" + expdate.toGMTString();
                 }
+                else if(!'0'=='1'){
+                    window.open("https://m.suzakpc.co.kr/bbs/board.php?bo_table=estimate");
+                }
             </script>
             <!--장점-->
             <section class="ai-pros">
                 <div class = "ai-pors-box">
                     <img src="https://ftp.suzakpc.co.kr/event/company/img/explan.png" alt="기업장점">
                 </div>
+            </section>
+            <!--고객사-->
+            <section class="customer">
+                <div class="customer-tit">
+                    <h2 class="section-tit">Our Customers</h2>
+                </div>
+                <div class="customer-box">
+                    <ul class="customer-lists">
+                        <li><img class="customer-logo"src="https://ftp.suzakpc.co.kr/event/company/img/kica.png" alt="한국정보인증"></li>
+                        <li><img class="customer-logo" src="https://ftp.suzakpc.co.kr/event/company/img/kaist.png" alt="카이스트"></li>
+                        <li><img class="customer-logo"src="https://ftp.suzakpc.co.kr/event/company/img/seoul.png" alt="서울대"></li>
+                        <li><img class="customer-logo"src="https://ftp.suzakpc.co.kr/event/company/img/logo2.png" alt="올포랜드"></li>
+                        <li><img class="customer-logo"src="https://ftp.suzakpc.co.kr/event/company/img/b2en.png" alt="비투엔"></li>
+                        <li><img class="customer-logo"src="https://ftp.suzakpc.co.kr/event/company/img/action2.png" alt="액션스퀘어"></li>
+                        <li><img class="customer-logo"src="https://ftp.suzakpc.co.kr/event/company/img/climax.png" alt="클라이맥스"></li>
+                        <li><img class="customer-logo" src="https://ftp.suzakpc.co.kr/event/company/img/logo1.png" alt="서울과학기술대학교"></li>
+                        <!--<li><img class="customer-logo" style = "padding-left : 100px;"src="https://ftp.suzakpc.co.kr/event/company/img/das.png" alt="다스버스"></li>-->
+                        <li><img class="customer-logo" src="https://ftp.suzakpc.co.kr/event/company/img/sungshin.png" alt="성신여대"></li>
+                        <li><img class="customer-logo"  src="https://ftp.suzakpc.co.kr/event/company/img/hanyang.png" alt="한양대학교"></li>
+                    </ul>
+                </div>  
+            </section>   	
+            <script>
+            $('.customer-lists').slick({
+                slidesToShow: 4,
+                slidesToScroll: 4,
+                autoplay: true,
+                autoplaySpeed: 1200,
+            });
+            </script>
+            <!--제품-->
+            <section class="pro-box" id="product">
+                <div class="work-pro">
+                    <h2 class="section-tit">Workstation Product</h2>
+                    <div class="work-lists" >
+                        <div class="work-prod1">
+                            <a class="pro-info" href = "https://www.suzakpc.co.kr/shop/item.php?it_id=2689733453" target="_self">
+                                <img class="pro-img" src="https://admin.suzakpc.co.kr/data/item/2689733453_l" alt="상품1">
+                                <ul class="pro-txt">
+                                        <h5>Intel Workstation</h5>
+                                        <li class="cpu">CPU : i9-13900K</li>
+                                        <li class="ram">RAM : DDR5-5600(32GB) X 2EA</li>
+                                        <li class="vga">VGA : RTX 4090 X 2EA</li>
+                                        <li class="ssd">SSD : P41 M.2 NVMe (2TB)</li>
+                                        <br>
+                                        <li class="price">8,200,000~</li>
+                                </ul>
+                                        <a class="more" href="https://www.suzakpc.co.kr/shop/item.php?it_id=2689733453" target="_self">learn more ></a> 
+                            </a>
+                        </div>
+                            <div class="work-prod1-2">
+                                <a class="pro-info" href = "https://www.suzakpc.co.kr/shop/item.php?it_id=2689829596" target="_self">
+                                    <img class="pro-img" src="https://ftp.suzakpc.co.kr/event/company/img/pro1.jpg"  alt="상품2">
+                                     <ul class="pro-txt">
+                                        <h5>AMD Workstation</h5>
+                                            <li class="cpu">CPU : R9-7900X</li>
+                                            <li class="ram">RAM : DDR5-5600(32GB) X 2EA</li>
+                                            <li class="vga">VGA : RTX 4090 X 2EA</li>
+                                            <li class="ssd">SSD : P41 M.2 NVMe (2TB)</li>
+                                            <br>
+                                            <li class="price">8,000,000~</li>
+                                        </ul>
+                                         
+                                            <a class="more" href="https://www.suzakpc.co.kr/shop/item.php?it_id=2689829596" target="_self">learn more ></a> 
+                                </a>
+                            </div>
+                    </div>    
+                    <div class="work-lists">
+                            <div class="work-prod2">
+                                <a class="pro-info" href = "https://www.suzakpc.co.kr/shop/item.php?it_id=2689831056" target="_self">
+                                    <img class="pro-img" src="https://ftp.suzakpc.co.kr/event/company/img/pro1.jpg" alt="상품3">
+                                     <ul class="pro-txt">
+                                        <h5>Intel Workstation2</h5>
+                                            <li class="cpu">CPU : i9-10920X</li>
+                                            <li class="ram">RAM : DDR4-3200(64GB) X 4EA</li>
+                                            <li class="vga">VGA : RTX 4090 X 3EA</li>
+                                            <li class="ssd">SSD : P41 M.2 NVMe (2TB)</li>
+                                            <br>
+                                            <li class="price">14,000,000~</li>
+                                        </ul>
+                                            <a class="more" href="https://www.suzakpc.co.kr/shop/item.php?it_id=2689831056" target="_self">learn more ></a> 
+                                </a>
+                            </div>
+                            <div class="work-prod2-2">
+                                <a class="pro-info" href = "https://www.suzakpc.co.kr/shop/item.php?it_id=2690878036" target="_self">
+                                    <img class="pro-img" src="https://ftp.suzakpc.co.kr/event/company/img/pro1.jpg" alt="상품4">
+                                     <ul class="pro-txt">
+                                        <h5>AMD Workstation2</h5>
+                                            <li class="cpu">CPU : R PRO 5955WX</li>
+                                            <li class="ram">RAM : DDR4-3200(64GB) X 4EA</li>
+                                            <li class="vga">VGA : RTX 4090 X 3EA</li>
+                                            <li class="ssd">SSD : P41 M.2 NVMe (2TB)</li>
+                                            <br>
+                                            <li class="price">14,500,000~</li>
+                                        </ul>
+                                            <a class="more" href="https://www.suzakpc.co.kr/shop/item.php?it_id=2690878036" target="_self">learn more ></a> 
+                                </a>
+                            </div>
+                            
+                        </div>
+                        <div class="work-lists">
+                            <div class="work-prod3">
+                                <a class="pro-info" href = "https://www.suzakpc.co.kr/shop/item.php?it_id=2692175829" target="_self">
+                                    <img class="pro-img" src="https://admin.suzakpc.co.kr/data/item/2692175829_l" alt="상품5">
+                                     <ul class="pro-txt">
+                                        <h5>Intel Workstation5</h5>
+                                            <li class="cpu">CPU : i9-10920X</li>
+                                            <li class="ram">RAM : DDR4-3200(64GB) X 4EA</li>
+                                            <li class="vga">VGA : A 6000 X 3EA</li>
+                                            <li class="ssd">SSD : P41 M.2 NVMe (2TB)</li>
+                                            <br>
+                                            <li class="price">26,308,200~</li>
+                                        </ul>
+                                            <a class="more" href="https://www.suzakpc.co.kr/shop/item.php?it_id=2692175829" target="_self">learn more ></a> 
+                                </a>
+                            </div>
+                            <div class="work-prod3-2">
+                                <a class="pro-info" href = "https://www.suzakpc.co.kr/shop/item.php?it_id=2692177669" target="_self">
+                                    <img class="pro-img" src="https://admin.suzakpc.co.kr/data/item/2692177669_l" alt="상품6">
+                                     <ul class="pro-txt">
+                                        <h5>AMD Workstation6</h5>
+                                            <li class="cpu">CPU : R PRO 5955WX</li>
+                                            <li class="ram">RAM : DDR4-3200(64GB) X 4EA</li>
+                                            <li class="vga">VGA : A 6000 X 3EA</li>
+                                            <li class="ssd">SSD : P41 M.2 NVMe (2TB)</li>
+                                            <br>
+                                            <li class="price">27,513,800~</li>
+                                        </ul>
+                                            <a class="more" href="https://www.suzakpc.co.kr/shop/item.php?it_id=2692177669" target="_self">learn more ></a> 
+                                </a>
+                            </div>
+                            
+                        </div>    
+                    </div> 
+                <!--서버-->
+                <!---<div class="sev-pro">
+                        <h2 class="section-tit">Workstation Severs</h2>
+                        <div class="sev-lists">
+                            <div class="work-prod1">
+                                <a class="pro-info" href = "https://www.suzakpc.co.kr/shop/item.php?it_id=2689829596" target="_self">
+                                    <img class="pro-img" src="https://ftp.suzakpc.co.kr/event/company/img/pro1.jpg" alt="상품1">
+                                    <ul class="pro-txt">
+                                            <h5>4x GPU Servers</h5>
+                                            <li class="cpu">CPU : R9-7900X</li>
+                                            <li class="ram">RAM : DDR5-5600(32GB) X 2EA</li>
+                                            <li class="vga">VGA : RTX 4090 X 2EA</li>
+                                            <li class="ssd">SSD : P41 M.2 NVMe (2TB)</li>
+                                            <br>
+                                            <li class="price">8,200,000~</li>
+                                    </ul>
+                                        <a class="more" href="https://www.suzakpc.co.kr/shop/item.php?it_id=2689829596" target="_self">learn more ></a> 
+                            </a>
+                        </div>
+                            <div class="work-prod1-2">
+                                <a class="pro-info" href = "https://www.suzakpc.co.kr/shop/item.php?it_id=2689829596" target="_self">
+                                    <img class="pro-img" src="https://ftp.suzakpc.co.kr/event/company/img/pro1.jpg" alt="상품2">
+                                     <ul class="pro-txt">
+                                        <h5>8x GPU Severs</h5>
+                                            <li class="cpu">CPU : R9-7900X</li>
+                                            <li class="ram">RAM : DDR5-5600(32GB) X 2EA</li>
+                                            <li class="vga">VGA : RTX 4090 X 2EA</li>
+                                            <li class="ssd">SSD : P41 M.2 NVMe (2TB)</li>
+                                            <br>
+                                            <li class="price">8,000,000~</li>
+                                        </ul>
+                                         
+                                            <a class="more" href="https://www.suzakpc.co.kr/shop/item.php?it_id=2689829596" target="_self">learn more ></a> 
+                                </a>
+                            </div>
+                        </div>    
+                   
+                    </div>  --->
             </section>
             <!--    워크스테이션    -->
             <secton class="frame-box">
@@ -346,6 +662,18 @@
             <section class="com-box">
                 <img class="com-pro" src="https://ftp.suzakpc.co.kr/event/company/img/com_pro.png" alt="회사 장점">
             </section>
+            <footer>
+                <div class="ft-box">
+                    <h2 class="ft-tit">견적이 필요합니까?</h2>
+                    <h5 class="ft-sub">궁금한 사항이 있으신 경우, 하단에 상담하기 버튼을 눌러주세요</h5>
+                    <div class="ft-btns">
+                        <div class="left-btn"  href="javascript:;" onclick="customer_();">상담하기
+                        </div>
+                        <div class="right-btn"><a href = "#product">제품 확인하기   ></a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
     </div>
 </body>
